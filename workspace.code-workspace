@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"latex-workshop.latex.tools": [
+			{
+				"name": "latexmk",
+				"command": "latexmk",
+				"args": [
+					"-xelatex",
+					"-shell-escape",
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"-pdf",
+					"-outdir=%OUTDIR%",
+					"%DOC%"
+				],
+				"env": {}
+			}
+		],
+		"latex-workshop.latex.recipes": [
+			{
+				"name": "latexmk 🔃",
+				"tools": [
+					"latexmk"
+				]
+			}
+		],
+		"latex-workshop.latex.recipe.default": "first"
+	}
+}
