@@ -1,6 +1,17 @@
 \documentclass{scrbook}
 \usepackage{subfiles}
 \usepackage{minted}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{fontspec}
+
+\setmonofont[Contextuals={Alternate},Scale=0.9]{iosevka-ss05-medium.ttf}
+
+\onehalfspacing
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{1.2}
+
+\appto\verbatim{\singlespacing}
 
 \begin{document}
 Hello world!

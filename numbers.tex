@@ -3,8 +3,44 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 \chapter{Printing numbers}
+So far we had seen a few software interrupt facilities of MSDOS:
+
+\begin{tabular}{ll}
+\toprule
+Interrupt & What does it do? \\
+\midrule
+20 & Finishes the current program and clean registers \\
+21 & It calls a special MSDOS function (setted in \texttt{AH}) \\
+\bottomrule
+\end{tabular}
+
+And so far we had seen two important MSDOS \texttt{INT 21} functions:
+
+\begin{tabular}{ll}
+\toprule
+Value in \texttt{AH} & MSDOS Function \\
+\midrule
+02 & Display in the screen whatever ASCII character is set in \texttt{DL} \\
+09 & Print in the screen whatever text is at address specified at \texttt{DX} and ended in \texttt{\$} \\
+\bottomrule
+\end{tabular}
+
+A simple program to print the letter \texttt{A} (ASCII hex code \texttt{0x41}) and then finish the program we could do something like this:
 
 \begin{minted}{asm}
-  mov ah, 02
+    MOV AH,02
+    MOV DL,41
+    INT 21
+    INT 20
+\end{minted}
+
+Now, could we just put the number \texttt{8} in \texttt{DL} and print it to the screen? Well, not really, because what the MSDOS expects is the ASCII code and, well, the ASCII code for 8 is \texttt{0x38}. The numbers in ASCII start on \texttt{0x30} so for printing the number 8 we can add \texttt{0x30}:
+
+\begin{minted}{asm}
+    MOV AH,02
+    MOV DL,08
+    ADD DL,30
+    INT 21
+    INT 20
 \end{minted}
 \end{document}

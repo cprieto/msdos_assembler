@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
+		"editor.wordWrap": "on",
 		"latex-workshop.viewer.pdf.internal.port": 36887,
 		"latex-workshop.latex.tools": [
 			{
