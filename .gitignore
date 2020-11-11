@@ -2,3 +2,8 @@
 _minted-main/
 main.pdf
 *.synctex.gz
+*.aux
+*.fls
+*.fdb_*
+*.log
+

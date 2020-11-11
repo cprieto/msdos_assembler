@@ -1,4 +1,7 @@
 {
   "dockerFile": "Dockerfile",
-  "image": "cprieto/latex"
+  "image": "cprieto/latex",
+  "forwardPorts": [
+    36887
+  ]
 }

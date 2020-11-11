@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
+		"latex-workshop.viewer.pdf.internal.port": 36887,
 		"latex-workshop.latex.tools": [
 			{
 				"name": "latexmk",
