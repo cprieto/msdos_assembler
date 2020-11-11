@@ -1,4 +1,8 @@
 {
+  "name": "LaTeX",
+  "extensions": [
+    "james-yu.latex-workshop"
+  ],
   "dockerFile": "Dockerfile",
   "image": "cprieto/latex",
   "forwardPorts": [
